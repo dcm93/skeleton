@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SightLife">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--D3-->
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/projections.css" />-->
+    <!--D3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.4/d3.min.js"></script>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!--Tether-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <!--BootstrapJS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!--App-->
+    <script src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="js/d3.geo.min.js"></script>
+    <script type="text/javascript" src="js/india_map.js"></script>
+    <script type="text/javascript" src="js/projections_line.js"></script>
+    <title>SightLife Global Data Portal</title>
+    <script>
+        $('#global-intro, #policy-intro, #benefits, #projections').height($('#hero').height());​
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <header>
+       <!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <a class="navbar-brand" href="#hero"><img src="/img/logo-SightLife_no-tagline.png" alt="SightLife"></a>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#global-intro">India</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#policy-intro">Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#implementation-level">Implementation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projections">Projections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>-->
+    </header>
+
+    <div class="container-fluid" id="hero">
+        <img src="img\Durga-9696-crop.jpg" class="img-fluid " alt="Responsive image" style="width:100%;">
+        <div style="position:absolute; top:50%; -ms-transform: translate(0,-50%); /* IE 9 */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%); font-size:150%;">
+            <h1 class="display-2" style="padding-left:10px;"> SightLife<br></h1>
+            <h2 class="h2-responsive" style="padding-left:10px;">Ending Corneal Blindness in India, <br> One transplant at a time. </h2>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="global-intro" style="padding:0px;">
+        <img src="img\Karthik-2597-2-crop.jpg" class="img-fluid" alt="Responsive image" style="width:100%;">
+        <div class="" style="position:absolute;top:35%;">
+            <div class="col-md-6 col-sm-6 offset-md-6 title shadow pull-right">
+                <h1 style="text-align:justify;">5.6 million people suffer from corneal blindness in India</h1>
+            </div>
+            <div class="col-md-6 offset-md-6 stretched-text shadow pull-right">
+                <p>India is home to the greatest corneal blind population in the world. There are 1 million people with corneal
+                    blindness in both eyes and 4.6 million people with corneal blindness in one eye. Fortunately, India has
+                    developed enough of a public health infrastructure in order to address the problem including eye banks,
+                    trained surgeons, and hospital partnerships. The implementation of policies including mandatory notification
+                    and first person consent will help eradicate corneal blindness in the most deeply affected country in
+                    the world.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="policy-intro">
+        <img src="img\photo-dharender-overview-01.jpg" class="img-fluid " alt="Responsive image" style="width:100%; height:80%;">
+        <div class="" style="position:absolute;top:10%;">
+            <div class="col-md-8 offset-md-2 justify-content-center title shadow">
+                <h2 class="divider-text">How can we move India towards the erradication of corneal blindness?</h2>
+            </div>
+            <div class="row offset-md-2" style="margin-top:7%;">
+                <div class="col-md-3 col-xs-2 stretched-text shadow" style="margin-left:15px; margin-right:15px;">
+                    <h2> Mandatory Notification</h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+                <div class="col-md-3 col-xs-2 stretched-text shadow" style="margin-left:15px; margin-right:15px;">
+                    <h2> First-Person Consent</h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+                <div class="col-md-3 col-xs-2 stretched-text shadow"style="margin-left:15px; margin-right:15px;">
+                    <h2>Universal Donor Registry</h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="implementation-level">
+        <div class="row">
+            <div class="col-lg-12 divider justify-content-center">
+                <h1 class="divider-text">HCRP Implementation Levels By State</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div style="padding-bottom: 1.5%;" class="col-md-6 justify-content-center offset-md-2" id="india-map">
+            </div>
+            <div class="col-md-4">
+                <svg width="300" height="675" style="padding-top:10%;">
+                    <g width="300" height="600" id="board">
+                        <rect width="300" height="600" style="stroke:black; fill:white; "></rect>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section" id="projections">
+        <div class="row">
+            <div class="col-lg-12 divider justify-content-center">
+                <h2 class="divider-text">How better can it be?</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="settings row text-center" style="color:black;">
+                    <div class="col-xs-6 cold-md-2 offset-md-4">
+                        <h3>Select states</h3>
+                        <p>Hold <kbd>ctrl</kbd> or <kbd>cmd</kbd> to select multiple countries.</p>
+                        <select name="countrySelect" id="countrySelect" class="form-control" size="5" multiple></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 offset-xs-5 offset-md-1" id="projection-line">
+            </div>
+            <div style="padding-top:10px;">
+                <svg width="500" height="500">
+                    <g width="500" height="500" id="board">
+                        <rect width="500" height="450" style="stroke:black; fill:white; "></rect>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="benefits">
+        <img src="img\Jasima-8440-705px.jpg" class="img-fluid " alt="Responsive image" style="width:100%; height:80%;">
+        <div class="" style="position:absolute;top:8%;">
+            <div class="col-md-8 offset-md-2 justify-content-center title shadow">
+                <h2 class="divider-text">How does HCRP benefit your population?</h2>
+            </div>
+            <div class="row offset-md-2" style="margin-top:5%;">
+                <div class="col-md-3 col-xs-2 stretched-text shadow" style="margin-left:15px; margin-right:15px;">
+                    <h2> Better Quality of Life</h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+                <div class="col-md-3 col-xs-2 stretched-text shadow" style="margin-left:15px; margin-right:15px;">
+                    <h2> Better Educational Outcomes </h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+                <div class="col-md-3 col-xs-2 stretched-text shadow"style="margin-left:15px; margin-right:15px;">
+                    <h2>Reintroduction to the Economy</h2>
+                    <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.
+                        And sometimes switches in french and say "miaou" just because well why not stick butt in face have
+                        my breakfast spaghetti yarn. </p>
+                        <p>Destroy the blinds sit and stare human is washing you why halp oh the horror flee scratch hiss bite.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section" id="work-sightlife">
+        <div class="row">
+            <div class="col-lg-12 justify-content-center">
+                <h2 style="text-align:center;background-color:#f7f7f7; color:#292b2c; font-size: 20px;">SightLife 2017©</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

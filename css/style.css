@@ -1,0 +1,186 @@
+body{ 
+  position:relative;
+  margin:0px 0px; 
+  overflow-y: scroll; 
+  overflow-x:hidden;
+  width:100%;
+  color: white;
+}
+
+/* Extra Small */
+@media (max-width:576px) {
+  html {
+    font-size: 8px;
+  }
+}
+/* Small */
+@media (min-width:768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Medium */
+@media (min-width:992px) {
+  html {
+    font-size: 16px;
+  }
+}
+/* Large */
+@media (min-width:1140px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+h1{
+  font-size: 175%;
+}
+
+p{
+  font-size: 115%;
+}
+
+hero{
+  background-size:cover;
+  position:relative;
+  height:100vh;
+}
+
+.header{
+  position:absolute;
+  top:50%;
+  text-align:center;
+  width:100%;
+  color:#fff;
+  font-size:36px;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%);  
+}
+
+hero > img{
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    -webkit-filter: sepia(100%); 
+    filter: sepia(100%);
+    max-width: 100%; 
+    opacity: 0;
+}
+
+hero{
+  background-image: url(/img/Durga-9696-crop.jpg);
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+global-intro > img{
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    -webkit-filter: sepia(100%); 
+    filter: sepia(100%);
+    max-width: 100%; 
+    opacity: 0;
+}
+
+global-intro{
+  background-image: url('/img/margot_crop.jpg');
+  -webkit-filter: sepia(50%); 
+  filter: sepia(50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+policy-intro > img{
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    -webkit-filter: sepia(100%); 
+    filter: sepia(100%);
+    max-width: 100%; 
+    opacity: 0;
+}
+
+policy-intro{
+  background-image: url('/img/photo-dharender-overview-01.jpg');
+  -webkit-filter: sepia(0%); 
+  filter: sepia(0%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.col-md-6{
+  position: relative;
+}
+
+.navbar-nav > li {
+  font-size: 125%;
+  margin-left:50px;
+  margin-right:50px;
+
+}
+
+.title{
+  text-align: center;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom:10px;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.divider{
+  background-color:#645D9B;
+}
+
+.divider-text{
+  text-align:center; 
+  margin-top:1%; 
+  margin-bottom:1%; 
+  font-size:175%;
+}
+
+.stretched-text{
+  padding-right: 35px;
+  padding-left: 35px;
+  text-align: justify;
+  /*padding-top:2%;*/
+}
+
+.container-fluid{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.row{
+  height:100%;
+}
+
+#india-map{
+  padding-top: 4%;
+}
+
+
+.shadow{
+  background-color:rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#projections, #implementation-level{
+  background-color: rgba(230,231,232,1.0);
+}
+
+
+
